@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ranking Musical Personalizado</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1DB954;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitulo {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .group {
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2a2a2a;
+      color: #fff;
+      text-align: center;
+    }
+
+    button {
+      background-color: #1DB954;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #17a94b;
+    }
+
+    .results {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .results h2 {
+      color: #1DB954;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    ::placeholder {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Qué tan fan sos?</h1>
+  <p class="subtitulo">Calificá cada grupo del 1 al 10 según cuánto te gusta.</p>
+  
+  <form id="ratingForm"></form>
+  
+  <button id="processBtn">Procesar Información</button>
+  
+  <div class="results" id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
